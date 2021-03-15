@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-  <script src="/main.js" defer></script>
+  <script src="./main.js" defer></script>
   
   <title>Frontend Mentor | FAQ Accordion Card</title>
 </head>
@@ -16,12 +16,11 @@
   <main class="main">
     <section class="card">
       <div class="card__img">
-        <!-- <img class="imgBox" src=".//images/illustration-box-desktop.svg" alt=""> -->
         <img class="imgPerson" src=".//images/illustration-woman-online-desktop.svg" alt="">
       </div>
       <article class="card__faq">
-        <h1 class="card__title">FAQ</h2>
-            <details class="card__item">
+        <h1 class="card__title">FAQ</h1>
+            <details class="card__item" aria-expanded="false">
               <summary class="item-wrapper">
                 <h2 class="item__title">How many team members can I invite?</h2>
                 <svg class="item__arrow" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
@@ -30,7 +29,7 @@
                 team members for the Premium plan.</p>
             </details>
 
-            <details class="card__item">
+            <details class="card__item" aria-expanded="false">
               <summary class="item-wrapper">
                 <h2 class="item__title">What is the maximum file upload size?</h2>
                 <svg class="item__arrow" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
@@ -38,7 +37,7 @@
               <p class="item__desc">No more than 2GB. All files in your account must fit your allotted storage space.</p>
             </details>
 
-            <details class="card__item">
+            <details class="card__item" aria-expanded="false">
               <summary class="item-wrapper">
                 <h2 class="item__title">How do I reset my password?</h2>
                 <svg class="item__arrow" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
@@ -47,7 +46,7 @@
               A reset link will be emailed to you.</p>
             </details>
 
-            <details class="card__item">
+            <details class="card__item" aria-expanded="false">
               <summary class="item-wrapper">
                 <h2 class="item__title">Can I cancel my subscription?</h2>
                 <svg class="item__arrow" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
@@ -55,7 +54,7 @@
               <p class="item__desc">Yes! Send us a message and we’ll process your request no questions asked.</p>
             </details>
 
-            <details class="card__item">
+            <details class="card__item" aria-expanded="false">
               <summary class="item-wrapper">
                 <h2 class="item__title">Do you provide additional support?</h2>
                 <svg class="item__arrow" width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
@@ -72,5 +71,7 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </footer>
+
+
 </body>
 </html>
