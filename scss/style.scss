@@ -143,20 +143,26 @@ body {
   .card {
     flex-direction: column;
     width: 31.25rem;
-    text-align: center;
     &::after {
       display: none;
     }
+
+    &__title {
+      text-align: center;
+    }
+
     &__img {
       overflow: visible;
       background: url(../images/bg-pattern-mobile.svg) no-repeat;
       background-position: center 0;
     }
     &__faq {
-      margin: 2rem 1rem;
+      margin: 1rem;
+      flex: 3;
     }
     &__item {
       margin: 0 1rem;
+      padding: 1.25rem 0;
     }
   }
 

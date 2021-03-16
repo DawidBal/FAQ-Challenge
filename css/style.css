@@ -197,10 +197,12 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 31.25rem;
-    text-align: center;
   }
   .card::after {
     display: none;
+  }
+  .card__title {
+    text-align: center;
   }
   .card__img {
     overflow: visible;
@@ -208,10 +210,14 @@ body {
     background-position: center 0;
   }
   .card__faq {
-    margin: 2rem 1rem;
+    margin: 1rem;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
   }
   .card__item {
     margin: 0 1rem;
+    padding: 1.25rem 0;
   }
   .item__title {
     font-size: 1.1rem;
