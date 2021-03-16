@@ -174,8 +174,8 @@ body {
     opacity: 0;
   }
   100% {
-    opacity: 1;
     font-size: 1rem;
+    opacity: 1;
   }
 }
 
@@ -185,8 +185,41 @@ body {
     opacity: 0;
   }
   100% {
-    opacity: 1;
     font-size: 1rem;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 68.75rem) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 31.25rem;
+    text-align: center;
+  }
+  .card::after {
+    display: none;
+  }
+  .card__img {
+    overflow: visible;
+    background: url(../images/bg-pattern-mobile.svg) no-repeat;
+    background-position: center 0;
+  }
+  .card__faq {
+    margin: 2rem 1rem;
+  }
+  .card__item {
+    margin: 0 1rem;
+  }
+  .item__title {
+    font-size: 1.1rem;
+  }
+  .imgPerson {
+    top: -8.75rem;
+    max-width: 100%;
+    right: 6rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

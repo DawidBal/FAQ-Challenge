@@ -16,7 +16,11 @@
   <main class="main">
     <section class="card">
       <div class="card__img">
-        <img class="imgPerson" src=".//images/illustration-woman-online-desktop.svg" alt="">
+        <picture>
+          <source srcset="./images/illustration-woman-online-desktop.svg" media="(min-width: calc(68.75rem - 1px))">
+          <source srcset="./images/illustration-woman-online-mobile.svg" media="(max-width: 68.75rem)">
+          <img class="imgPerson" src="./images/illustration-woman-online-desktop.svg" alt="">
+        </picture>
       </div>
       <article class="card__faq">
         <h1 class="card__title">FAQ</h1>
@@ -68,7 +72,7 @@
 <footer class="footer">
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Dave</a>.
   </div>
 </footer>
 
