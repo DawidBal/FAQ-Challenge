@@ -22,10 +22,12 @@ body {
   display: flex;
   width: 90rem;
   height: 45rem;
+  margin-top: 9rem;
+  position: relative;
+
   background: var(--white);
   border-radius: 1rem;
   box-shadow: 0 10px 15px var(--semi-black);
-  position: relative;
 
   &::after {
     content: url('../images/illustration-box-desktop.svg');
@@ -59,16 +61,16 @@ body {
     margin: 0;
 
     &[open] .item__title {
-    font-weight: setWeight(bold);
+      font-weight: setWeight(bold);
     }
 
     &[open] .item-wrapper {
-      &:hover { 
-      color: var(--soft-red);
-    }
+      &:hover {
+        color: var(--soft-red);
+      }
     }
 
-    &[open] .item__arrow {
+    &[open] .item__title::after {
       transform: rotate(180deg);
     }
 
@@ -79,10 +81,10 @@ body {
 }
 
 .imgPerson {
-    position: absolute;
-    right: 7rem;
-    top: 7rem;
-  }
+  position: absolute;
+  right: 7rem;
+  top: 7rem;
+}
 
 .attribution {
   font-size: 11px;
@@ -98,12 +100,6 @@ body {
   justify-content: space-between;
 }
 
-.item__arrow {
-  margin-right: 1rem;
-  transition: transform 200ms;
-  
-}
-
 .item__desc {
   margin-top: 1rem;
   width: 80%;
@@ -116,16 +112,24 @@ body {
     cursor: pointer;
     color: var(--soft-red);
 
-    & .item__arrow {
+    & .item__title::after {
       transform: rotate(90deg);
     }
   }
 }
 
 .item__title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   font-weight: setWeight(regular);
-}
 
+  &::after {
+    content: url('../images/icon-arrow-down.svg');
+    margin-right: 1rem;
+    transition: transform 200ms;
+  }
+}
 
 @keyframes show {
   0% {
@@ -135,7 +139,6 @@ body {
   100% {
     font-size: 1rem;
     opacity: 1;
-    
   }
 }
 

@@ -47,11 +47,12 @@ body {
   display: flex;
   width: 90rem;
   height: 45rem;
+  margin-top: 9rem;
+  position: relative;
   background: var(--white);
   border-radius: 1rem;
   -webkit-box-shadow: 0 10px 15px var(--semi-black);
           box-shadow: 0 10px 15px var(--semi-black);
-  position: relative;
 }
 
 .card::after {
@@ -98,7 +99,7 @@ body {
   color: var(--soft-red);
 }
 
-.card__item[open] .item__arrow {
+.card__item[open] .item__title::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -135,14 +136,6 @@ body {
           justify-content: space-between;
 }
 
-.item__arrow {
-  margin-right: 1rem;
-  -webkit-transition: -webkit-transform 200ms;
-  transition: -webkit-transform 200ms;
-  transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
-}
-
 .item__desc {
   margin-top: 1rem;
   width: 80%;
@@ -159,13 +152,29 @@ body {
   color: var(--soft-red);
 }
 
-.item-wrapper:hover .item__arrow {
+.item-wrapper:hover .item__title::after {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
 .item__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
   font-weight: 400;
+}
+
+.item__title::after {
+  content: url("../images/icon-arrow-down.svg");
+  margin-right: 1rem;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
 }
 
 @-webkit-keyframes show {
